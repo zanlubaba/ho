@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Những Ngôi Sao Giữa 12A6</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#F6D48B;--gold2:#E0A954;--ivory:#F8FAFC;--mut:#CBD5E1;--navy:#0B1020}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:#070913;color:var(--ivory);font:300 15px/1.6 'Be Vietnam Pro',system-ui,sans-serif}
+h1,h2,h3,.qt{font-family:'Playfair Display',Georgia,serif;font-weight:500}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+/* HERO */
+.hero{position:relative;height:100vh;min-height:700px;overflow:hidden;background:linear-gradient(#070913,#12172B)}
+#bg{position:absolute;inset:0;width:100%;height:100%}
+.mist{position:absolute;left:-10%;right:-10%;bottom:-8%;height:44%;pointer-events:none;filter:blur(40px);animation:drift 14s ease-in-out infinite alternate;background:radial-gradient(ellipse 40% 60% at 25% 80%,#E0A95466,transparent),radial-gradient(ellipse 40% 60% at 74% 85%,#E0A95455,transparent),radial-gradient(ellipse 45% 55% at 50% 98%,#8b7bd860,transparent)}
+@keyframes drift{to{transform:translateX(3%) scale(1.06)}}
+.top{position:relative;z-index:5;text-align:center;padding:72px 20px 0}
+.top h1{font-size:clamp(34px,6.5vw,72px);line-height:1.1;color:var(--gold);text-shadow:0 0 40px #F6D48B66;transition:text-shadow 1s}
+.open .top h1{text-shadow:0 0 70px #F6D48Bcc}
+.badge{display:inline-block;margin-top:22px;padding:8px 20px;border-radius:99px;font-size:13px;color:var(--gold);border:1px solid #F6D48B55;background:#0b1020aa;backdrop-filter:blur(10px)}
+.sky{position:absolute;inset:0;z-index:4;transition:opacity .9s}
+.open .sky{opacity:.12;pointer-events:none}
+.st{position:absolute;padding:10px;transform:translate(-50%,-50%);border-radius:50%;outline:0}
+.st i{display:block;width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle,#fff 0,var(--c) 40%,transparent 72%);animation:tw var(--d) ease-in-out infinite;transition:transform .3s,filter .3s}
+.st:hover,.st:focus-visible{z-index:9}
+.st:hover i,.st:focus-visible i{transform:scale(1.7);filter:brightness(1.4) drop-shadow(0 0 12px var(--gold))}
+@keyframes tw{0%,100%{opacity:.55;translate:0 0}50%{opacity:1;translate:0 -6px}}
+.tp{position:absolute;bottom:calc(100% - 4px);left:50%;transform:translate(-50%,6px);display:flex;align-items:center;gap:10px;padding:6px 12px 6px 6px;border-radius:99px;white-space:nowrap;font-size:13px;background:#0b1020e6;border:1px solid #F6D48B55;backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:.25s}
+.tp img{width:30px;height:30px;border-radius:50%;object-fit:cover}.tp b{font-weight:600}.tp s{text-decoration:none;color:var(--gold)}
+.st:hover .tp,.st:focus-visible .tp{opacity:1;transform:translate(-50%,0)}
+.st.l .tp{left:0;transform:translate(0,6px)}.st.r .tp{left:auto;right:0;transform:translate(0,6px)}
+.st.l:hover .tp,.st.r:hover .tp,.st.l:focus-visible .tp,.st.r:focus-visible .tp{transform:none}
+.ctl{position:absolute;left:50%;bottom:17%;transform:translateX(-50%);z-index:6;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;width:max-content;max-width:calc(100% - 24px);padding:8px 8px 8px 22px;border-radius:30px;font-size:13px;color:var(--mut);background:#0b1020b3;border:1px solid #F6D48B66;backdrop-filter:blur(12px)}
+.cta{padding:10px 22px;border-radius:99px;font-weight:500;color:#2a1a00;background:linear-gradient(135deg,#F6D48B,#E0A954);box-shadow:0 0 24px #E0A95466;transition:transform .3s}
+.cta:hover{transform:scale(1.05)}
+.cap{position:absolute;left:0;right:0;bottom:6%;z-index:6;text-align:center}
+.cap small{display:block;letter-spacing:.35em;font-size:11px;color:var(--gold)}
+.cap span{font:italic 22px 'Playfair Display',serif;color:var(--ivory)}
+/* PORTAL */
+.portal{position:absolute;left:50%;top:54%;width:0;height:0;z-index:3;pointer-events:none}
+.portal>*{position:absolute;left:50%;top:50%;border-radius:50%;opacity:0;transform:translate(-50%,-50%) scale(0);transition:transform 1.5s cubic-bezier(.2,.8,.2,1),opacity 1.1s}
+.open .portal>*{opacity:var(--o);transform:translate(-50%,-50%) scale(var(--k))}
+.orb{--o:1;--k:1.2;width:min(46vw,420px);aspect-ratio:1;background:radial-gradient(circle,#fff 0,#F6D48B 18%,#E0A95488 42%,transparent 70%);animation:pulse 4s ease-in-out infinite}
+.ring{width:min(46vw,420px);aspect-ratio:1;border:1.5px solid #F6D48B99;animation:pulse 4s ease-in-out infinite}
+.r1{--o:.8;--k:.9}.r2{--o:.55;--k:1.45;animation-delay:-1s}.r3{--o:.3;--k:2.1;animation-delay:-2s}
+.rays{--o:.9;--k:1;width:min(130vw,1100px);aspect-ratio:1;background:repeating-conic-gradient(#F6D48B3d 0 2deg,transparent 2deg 12deg);-webkit-mask:radial-gradient(circle,#000,transparent 68%);mask:radial-gradient(circle,#000,transparent 68%);animation:spin 40s linear infinite}
+@keyframes pulse{50%{scale:1.06}}@keyframes spin{to{rotate:360deg}}
+/* SECTIONS */
+.sec{position:relative;padding:112px 20px}
+.sec h2{text-align:center;font-size:clamp(30px,5vw,54px);color:var(--gold);text-shadow:0 0 30px #F6D48B44}
+.sub{text-align:center;color:var(--mut);margin-top:14px}
+.tch{background:linear-gradient(#12172B,#0B1020 60%,#070913)}
+.tg{max-width:980px;margin:72px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;align-items:start}
+@media(min-width:820px){.tc:nth-child(odd){margin-top:56px}}
+.tc{padding:8px;border-radius:20px;text-align:left;background:linear-gradient(135deg,#F6D48B,#7a5a1f 45%,#E0A954);box-shadow:0 20px 60px #000a,0 0 40px #E0A95422;opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
+.tc.in{opacity:1;transform:none}.tc.in:hover{transform:translateY(-8px)}
+.ph{position:relative;border-radius:14px;overflow:hidden}
+.ph img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.nm{position:absolute;inset:auto 0 0;padding:56px 16px 16px;background:linear-gradient(transparent,#070913ee)}
+.nm h3{font-size:21px}.nm small{color:var(--gold);font-size:13px}
+.ros{background:#070913}
+.rg{max-width:1200px;margin:64px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.rc{text-align:left;border-radius:12px;overflow:hidden;background:var(--navy);border:1px solid #F6D48B22;transition:transform .3s,border-color .3s,box-shadow .3s}
+.rc:hover{transform:translateY(-5px);border-color:#F6D48B88;box-shadow:0 12px 30px #E0A95422}
+.rc img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.rc div{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:10px 12px;font-size:14px;font-weight:400}
+.rc span{color:var(--gold)}
+footer{padding:32px 20px 48px;text-align:center;font-size:13px;color:#94a3b8;background:#070913}
+/* MODAL */
+.md{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:#050710b3;backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:.3s}
+.md.on{opacity:1;visibility:visible}
+.bx{position:relative;width:100%;max-width:860px;max-height:92vh;overflow:auto;border-radius:20px;background:var(--navy);border:1px solid #F6D48B88;box-shadow:0 0 80px #E0A95430;transform:scale(.93) translateY(18px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.md.on .bx{transform:none}
+.mg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:32px;padding:28px}
+.mg .L img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:1px solid #F6D48B66}
+.close{display:block;width:100%;margin-top:14px;padding:10px;border-radius:99px;border:1px solid #F6D48B66;color:var(--gold);transition:.3s}
+.close:hover{background:var(--gold);color:var(--navy)}
+.role{display:inline-block;margin-top:8px;padding:4px 14px;border-radius:99px;font-size:12px;color:var(--gold);background:#F6D48B1a;border:1px solid #F6D48B55}
+.mg h3{font-size:clamp(28px,4vw,40px);margin-top:14px;font-weight:500}
+.qt{margin-top:20px;padding:16px 20px;border-left:3px solid var(--gold2);border-radius:0 12px 12px 0;background:#ffffff0a;font-style:italic;font-weight:400;font-size:18px;line-height:1.6;color:var(--gold)}
+.mg p{margin-top:18px;color:var(--mut)}
+.x{position:absolute;right:14px;top:14px;z-index:2;width:34px;height:34px;border-radius:50%;font-size:20px;background:#ffffff14;transition:.3s}
+.x:hover{background:var(--gold);color:var(--navy)}
+@media(max-width:640px){.mg{grid-template-columns:1fr;padding:20px}.mg .L img{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.tc{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<section class="hero" id="hero">
+  <canvas id="bg"></canvas>
+  <div class="mist"></div>
+  <div class="portal"><div class="rays"></div><div class="ring r3"></div><div class="ring r2"></div><div class="ring r1"></div><div class="orb"></div></div>
+  <div class="top">
+    <h1>Những Ngôi Sao Giữa 12A6</h1>
+    <span class="badge">✦ Chạm vào một ngôi sao ✦</span>
+  </div>
+  <div class="sky" id="sky"></div>
+  <div class="ctl">
+    <span id="hint">ⓘ Di chuột qua các ngôi sao để khám phá • Bấm để phóng to</span>
+    <button class="cta" id="cta">✨ Mở Khoảnh Khắc</button>
+  </div>
+  <div class="cap"><small>THANH XUÂN RỰC RỠ</small><span>Khoảnh Khắc</span></div>
+</section>
+
+<section class="sec tch" id="nguoi-dan-duong">
+  <h2>Người Dẫn Đường Của 12A6</h2>
+  <p class="sub">Những người thầy, người cô đã tận tâm dìu dắt chúng em</p>
+  <div class="tg" id="tg"></div>
+</section>
+
+<section class="sec ros" id="danh-sach">
+  <h2>Những Ngôi Sao Của Lớp</h2>
+  <p class="sub" id="rsub"></p>
+  <div class="rg" id="rg"></div>
+</section>
+
+<footer>Những Ngôi Sao Giữa 12A6 · Thanh xuân rực rỡ</footer>
+
+<div class="md" id="md">
+  <div class="bx" role="dialog" aria-modal="true">
+    <button class="x" data-x aria-label="Đóng">×</button>
+    <div class="mg" id="mv"></div>
+  </div>
+</div>
+
+<script>
+/* ===== DỮ LIỆU: thay photo bằng đường dẫn ảnh thật (vd 'photos/triet.jpg') ===== */
+const P = n => { // ảnh chân dung tạm (SVG) – chạy được ngay không cần ảnh
+  const h = [...n].reduce((a, c) => a + c.charCodeAt(0), 0) % 360, t = ([...n.trim().split(' ').pop()][0] || '').toUpperCase();
+  return 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h},40%,24%)"/><stop offset="1" stop-color="#0B1020"/></linearGradient></defs><rect width="300" height="400" fill="url(#g)"/><circle cx="150" cy="150" r="52" fill="#F6D48B" opacity=".25"/><path d="M50 400c0-90 45-130 100-130s100 40 100 130z" fill="#F6D48B" opacity=".18"/><text x="150" y="172" font-family="Georgia,serif" font-size="64" text-anchor="middle" fill="#F6D48B">${t}</text></svg>`);
+};
+
+const teachersData = [
+  { id: 't1', name: 'Thầy Nguyễn Văn Hải', role: 'Giáo viên bộ môn Toán', photo: P('Thầy Hải'),
+    quote: 'Khó khăn chỉ là bài toán chưa tìm ra lời giải.',
+    message: 'Cảm ơn thầy đã kiên nhẫn giảng lại từng bài, tin chúng em khi chính chúng em còn hoài nghi. Những giờ học của thầy là điều 12A6 sẽ nhớ mãi.' },
+  { id: 't2', name: 'Cô Phạm Thị Thiệp', role: 'Giáo viên Chủ nhiệm', photo: P('Cô Thiệp'),
+    quote: 'Mỗi học trò là một ngôi sao, chỉ cần được tin tưởng để tỏa sáng.',
+    message: 'Cô là người đã giữ lửa cho cả lớp qua những ngày vui lẫn những ngày chông chênh. Cảm ơn cô vì đã luôn đứng sau lưng, để chúng em tự tin bước về phía trước.' },
+  { id: 't3', name: 'Cô Trần Thị Mai', role: 'Giáo viên bộ môn Ngữ văn', photo: P('Cô Mai'),
+    quote: 'Văn chương dạy ta biết yêu thương trước khi biết thành công.',
+    message: 'Những trang văn của cô đã dạy chúng em cách lắng nghe và cách nói điều mình nghĩ. Cảm ơn cô đã làm thanh xuân của 12A6 thêm dịu dàng.' },
+];
+
+const NAMES = ['Đoàn Minh Triết','Lê Thị Tường Vy','Vũ Ngọc Hà','Nguyễn Hoàng An','Trần Thảo Nhi','Phạm Gia Bảo','Hoàng Bảo Châu','Võ Thanh Dũng','Đặng Khánh Linh','Bùi Quốc Huy','Ngô Thu Hằng','Dương Anh Khoa','Lý Mỹ Duyên','Phan Đức Thịnh','Trương Ngọc Mai','Đinh Quang Vinh','Lâm Tuyết Nhung','Huỳnh Minh Khang','Mai Phương Thảo','Tô Hải Đăng','Cao Diễm My','Lương Thế Anh','Hồ Bảo Trân','Châu Gia Hân','Kiều Anh Tuấn','La Thanh Trúc','Tạ Nhật Minh','Thái Uyên Phương','Quách Trọng Nghĩa','Diệp Kim Ngân','Văn Cẩm Tú','Đỗ Hữu Phước','Lại Ngọc Ánh','Từ Gia Huy','Sơn Hồng Nhung','Ung Thiên Ân','Giang Bảo Ngọc','Nghiêm Duy Anh'];
+const ROLES = ['Lớp trưởng', 'Lớp phó học tập', 'Lớp phó văn thể mỹ'];
+const QUOTES = ['Thanh xuân là để sống hết mình.', 'Cứ đi rồi sẽ tới.', 'Bạn bè là ngôi sao không bao giờ tắt.', 'Mỗi ngày đến lớp là một kỷ niệm.', 'Tuổi trẻ chỉ có một lần, hãy rực rỡ.', 'Cùng nhau, mình sẽ làm được.'];
+// Mỗi dòng: id, name, role, photo, quote, message – sửa trực tiếp để thay dữ liệu thật
+const studentsData = NAMES.map((name, i) => ({
+  id: 's' + (i + 1), name, role: ROLES[i] || 'Học sinh 12A6', photo: P(name), quote: QUOTES[i % QUOTES.length],
+  message: `Gửi 12A6: cảm ơn mọi người đã cùng ${name.split(' ').pop()} đi qua những ngày đáng nhớ nhất của thanh xuân. Hẹn gặp lại ở bất cứ nơi nào bầu trời đưa chúng ta tới.`,
+}));
+/* ============================================================================== */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const ALL = [...teachersData, ...studentsData];
+
+/* Nền sao nhỏ */
+(() => {
+  const c = $('#bg'), x = c.getContext('2d'); let w, h;
+  const S = Array.from({ length: 150 }, () => ({ x: Math.random(), y: Math.random() * .85, r: Math.random() * 1.2 + .2, p: Math.random() * 6.28, s: .4 + Math.random() * 1.4 }));
+  const rs = () => { const d = Math.min(devicePixelRatio || 1, 2); w = c.clientWidth; h = c.clientHeight; c.width = w * d; c.height = h * d; x.setTransform(d, 0, 0, d, 0, 0); };
+  rs(); addEventListener('resize', rs);
+  (function f(t) {
+    x.clearRect(0, 0, w, h);
+    for (const s of S) { x.globalAlpha = .25 + .75 * Math.abs(Math.sin(t / 1000 * s.s + s.p)); x.fillStyle = '#fff8e7'; x.beginPath(); x.arc(s.x * w, s.y * h, s.r, 0, 6.283); x.fill(); }
+    requestAnimationFrame(f);
+  })(0);
+})();
+
+/* Chòm sao: mỗi học sinh là một ngôi sao */
+(() => {
+  const rnd = (i, k) => { const v = Math.sin(i * 127.1 + k * 311.7) * 43758.5453; return v - Math.floor(v); };
+  const N = studentsData.length;
+  $('#sky').innerHTML = studentsData.map((m, i) => {
+    const t = N > 1 ? i / (N - 1) : .5, xx = 4 + 92 * t, yy = 58 - 10 * Math.sin(Math.PI * t) + (rnd(i, 1) - .5) * 16;
+    const s = 9 + Math.pow(rnd(i, 2), 1.6) * 30, c = rnd(i, 3) > .4 ? '#F6D48B' : '#FFF8E7', d = 3 + rnd(i, 4) * 4;
+    return `<button class="st ${xx < 22 ? 'l' : xx > 78 ? 'r' : ''}" data-star="${m.id}" aria-label="${esc(m.name)}" style="left:${xx}%;top:${yy}%"><i style="--s:${s}px;--c:${c};--d:${d}s;animation-delay:${-rnd(i, 5) * d}s"></i><span class="tp"><img src="${esc(m.photo)}" alt=""><b>${esc(m.name)}</b><s>★</s></span></button>`;
+  }).join('');
+})();
+
+/* Cổng ánh sáng: mở / thu nhỏ */
+const hero = $('#hero'), cta = $('#cta'), hint = $('#hint'); let isOpen = false, timer;
+function setOpen(v, scroll) {
+  isOpen = v; hero.classList.toggle('open', v); clearTimeout(timer);
+  cta.textContent = v ? '✨ Đã mở khoảnh khắc • Bấm để thu nhỏ' : '✨ Mở Khoảnh Khắc';
+  hint.textContent = v ? 'ⓘ Cuộn xuống để gặp những người dẫn đường' : 'ⓘ Di chuột qua các ngôi sao để khám phá • Bấm để phóng to';
+  if (v && scroll) timer = setTimeout(() => isOpen && $('#nguoi-dan-duong').scrollIntoView({ behavior: 'smooth' }), 1500);
+}
+cta.onclick = () => setOpen(!isOpen, true);
+
+/* Người dẫn đường */
+$('#tg').innerHTML = teachersData.map(t => `<button class="tc" data-id="${t.id}"><div class="ph"><img src="${esc(t.photo)}" alt="${esc(t.name)}"><div class="nm"><h3>${esc(t.name)}</h3><small>${esc(t.role)}</small></div></div></button>`).join('');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 });
+document.querySelectorAll('.tc').forEach((el, i) => { el.style.transitionDelay = i * .15 + 's'; io.observe(el); });
+
+/* Danh sách lớp */
+$('#rsub').textContent = `${studentsData.length} gương mặt, một thanh xuân chung`;
+$('#rg').innerHTML = studentsData.map(s => `<button class="rc" data-id="${s.id}"><img src="${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy"><div><span style="color:var(--ivory)">${esc(s.name)}</span><span>★</span></div></button>`).join('');
+
+/* Modal chi tiết */
+const md = $('#md');
+function show(id) {
+  const m = ALL.find(x => x.id === id); if (!m) return;
+  $('#mv').innerHTML = `<div class="L"><img src="${esc(m.photo)}" alt="${esc(m.name)}"><button class="close" data-x>Đóng lại</button></div><div><span class="role">${esc(m.role)}</span><h3>${esc(m.name)}</h3><blockquote class="qt">“${esc(m.quote)}”</blockquote><p>${esc(m.message)}</p></div>`;
+  md.classList.add('on'); document.body.style.overflow = 'hidden';
+}
+const close = () => { md.classList.remove('on'); document.body.style.overflow = ''; };
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-x]') || e.target === md) return close();
+  const st = e.target.closest('[data-star]');
+  if (st) { setOpen(true, false); return void setTimeout(() => show(st.dataset.star), 700); }
+  const b = e.target.closest('[data-id]'); if (b) show(b.dataset.id);
+});
+addEventListener('keydown', e => e.key === 'Escape' && close());
+</script>
+</body>
+</html>
